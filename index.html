@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blah</title>
+  <link rel="stylesheet" type="text/css" href="base.css" />
+  <style>
+    div.gradient-area {
+      background-color: var(--gradient1);
+      background-image: linear-gradient(var(--angle), var(--gradient1), var(--gradient2));
+      transition: background-color .2s;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <main>
+      <div class="gradient-area"></div>
+      <div class="gradient-control">
+        <h1>Wild Ass Gradients</h1>
+        <form action="" class="gradient-form">
+          <fieldset>  
+            <label for="gradient1">Gradient Color 1:</label>
+            <input type="color" id="gradient1" name="gradient1" value="#e66465" class="gradient-color">
+            <label for="gradient2">Gradient Color 2:</label>
+            <input type="color" id="gradient2" name="gradient2" value="#e66465" class="gradient-color">
+            <label for="angle">Points (between -360 and 360):</label>
+            <span id="angleValue"></span>
+            <input type="range" id="angle" name="angle" min="-360" max="360" value="getRandomAngle()" oninput="showVal(this.value)" onchange="showVal(this.value)">
+            <input type="button" onclick="setRandomGradient(event)" value="Generate New Gradient" />
+          </fieldset>
+        </form>
+        <div class="output">
+          <p id="outputcss"></p>
+        </div>
+        <p class="copyright">&copy; 2020 Joey Reyes</p>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const styles = getComputedStyle(document.documentElement);
+    const gradient1Value = styles.getPropertyValue('--gradient1');
+    const gradient2Value = styles.getPropertyValue('--gradient2');
+    const angle = styles.getPropertyValue('--angle');
+    const outputText = document.getElementById("outputcss");
+    outputText.innerHTML = writeOutput(angle, gradient1Value, gradient2Value);
+
+    function getRandomColor() {
+      const letters = '0123456789abcdef';
+      let color = '#';
+      for (let i = 0; i < 6; i+=1) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    };
+
+    function getRandomAngle() {
+      let number = Math.floor(Math.random()*99) + 1;
+      number *= Math.floor(Math.random()*2) == 1 ? 1 : -1;
+      return number;
+    };
+
+    function setRandomGradient(event) {
+      if(event) {
+        event.preventDefault();
+      }
+      const gradient1Value = getRandomColor();
+      const gradient2Value = getRandomColor();
+      const randomAngle = getRandomAngle();
+      document.documentElement.style.setProperty('--gradient1', gradient1Value);
+      document.documentElement.style.setProperty('--gradient2', gradient2Value);
+      document.documentElement.style.setProperty('--angle', `${getRandomAngle()}deg`);
+      document.getElementById("gradient1").value = gradient1Value;
+      document.getElementById("gradient2").value = gradient2Value;
+      document.getElementById("angle").value = randomAngle;
+      document.getElementById("angleValue").innerHTML = `${randomAngle}deg`;
+      outputText.innerHTML = writeOutput(`${getRandomAngle()}deg`, gradient1Value, gradient2Value)
+    };
+
+    setRandomGradient();
+
+    function writeOutput(angle, gradient1, gradient2) {
+      const outputText = `linear-gradient(${angle}, ${gradient1}, ${gradient2})`;
+      return outputText;
+    };
+
+    // 4. Watch for Changes
+    const colorPickers = document.querySelectorAll(".gradient-color");
+    for (colorPicker of colorPickers) {
+      colorPicker.addEventListener("change", watchColorPicker, false);
+    };
+
+    function watchColorPicker(event) {
+      const gradientNum = event.srcElement.name;
+      document.documentElement.style.setProperty(`--${gradientNum}`, event.target.value);
+      const angle = styles.getPropertyValue('--angle');
+      const gradient1Value = styles.getPropertyValue('--gradient1');
+      const gradient2Value = styles.getPropertyValue('--gradient2');
+      outputText.innerHTML = writeOutput(angle, gradient1Value, gradient2Value);
+    };
+
+    // Angle Slider:
+    function showVal(value){
+      document.getElementById("angleValue").innerHTML = value;
+      const angleValue = `${value}deg`;
+      document.documentElement.style.setProperty('--angle', angleValue);
+      const angle = styles.getPropertyValue('--angle');
+      const gradient1Value = styles.getPropertyValue('--gradient1');
+      const gradient2Value = styles.getPropertyValue('--gradient2');
+      outputText.innerHTML = writeOutput(angle, gradient1Value, gradient2Value);
+    };
+
+  </script>
+</body>
+</html>

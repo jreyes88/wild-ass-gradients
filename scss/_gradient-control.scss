@@ -1,0 +1,18 @@
+div.gradient-control {
+  background-color: $white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+form.gradient-form {
+  display: flex;
+  flex-direction: column;
+
+  fieldset * {
+    display: block;
+  }
+}
+
+.copyright {
+  
+}
