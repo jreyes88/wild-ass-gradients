@@ -1,12 +1,15 @@
 # wild ass gradients.
 
+a quick and dirty gradient generator
+
+
 I mostly did this project out of a desire to get hands on with [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties). I've used SCSS for a while (I actually did so for this project as well, but just for layout and form styles), but one of the advantages afforded by CSS Custom Properties is that you can use JavaScript to update the CSS Custom Property values on the fly. Sweet.
 
 
 Otherwise, I think it was my friend [Chris Wigington](https://github.com/chriswigington) who had made a Facebook post initially about doing some wild ass gradients. Credit to him for the idea. Personally I think these gradients could get even wilder, but I'm happy with this as a springboard.
 
 
-There's a feature wishlist at the bottom of this README if you would like to contribute, so pull requests are welcome for those or any other code improvements or wild ass ideas.
+There's a [feature wishlist](a quick and dirty gradient generator) at the bottom of this README if you would like to contribute, so pull requests are welcome for those or any other code improvements or wild ass ideas.
 
 
 ## Functionality
