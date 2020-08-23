@@ -35,3 +35,6 @@ There's a [feature wishlist](https://github.com/jreyes88/wild-ass-gradients#futu
 - More than two colors supported
 - Radial Gradients
 - Maybe some wild ass textures
+
+
+Thanks to Tim Holman for his [awesome GitHub Corners repo](https://github.com/tholman/github-corners).
