@@ -9,7 +9,7 @@ I mostly did this project out of a desire to get hands on with [CSS Custom Prope
 Otherwise, I think it was my friend [Chris Wigington](https://github.com/chriswigington) who had made a Facebook post initially about doing some wild ass gradients. Credit to him for the idea. Personally I think these gradients could get even wilder, but I'm happy with this as a springboard.
 
 
-There's a [feature wishlist](a quick and dirty gradient generator) at the bottom of this README if you would like to contribute, so pull requests are welcome for those or any other code improvements or wild ass ideas.
+There's a [feature wishlist](https://github.com/jreyes88/wild-ass-gradients#future-feature-wishlist) at the bottom of this README if you would like to contribute, so pull requests are welcome for those or any other code improvements or wild ass ideas.
 
 
 ## Functionality
