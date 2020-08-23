@@ -1,13 +1,13 @@
-$sansserif: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$mono: "Courier New", Courier, monospace;
 
 body {
   font-size: 100%;
-  color: $black;
+  color: $white;
 }
 
-body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {
+body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6, button {
   font-size-adjust: 0.5;
-  font-family: $sansserif;
+  font-family: $mono;
 }
 
 body {

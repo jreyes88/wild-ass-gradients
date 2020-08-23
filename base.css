@@ -1,1 +1,320 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}body{font-size:100%;color:#0f0f0f}body,caption,th,td,input,textarea,select,option,legend,fieldset,h1,h2,h3,h4,h5,h6{font-size-adjust:0.5;font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif}body{font-size:1em;line-height:1.25}@media (min-width: 43.75em){body{font-size:1em;line-height:1.375}}h1{font-size:2em;line-height:1.25}@media (min-width: 43.75em){h1{font-size:2.5em;line-height:1.125}}@media (min-width: 56.25em){h1{font-size:3em;line-height:1.05}}h2{font-size:1.625em;line-height:1.15384615}@media (min-width: 43.75em){h2{font-size:2em;line-height:1.25}}@media (min-width: 56.25em){h2{font-size:2.25em;line-height:1.25}}h3{font-size:1.375em;line-height:1.13636364}@media (min-width: 43.75em){h3{font-size:1.5em;line-height:1.25}}@media (min-width: 56.25em){h3{font-size:1.75em;line-height:1.25}}h4{font-size:1.125em;line-height:1.11111111}@media (min-width: 43.75em){h4{line-height:1.22222222}}blockquote{font-size:1.25em;line-height:1.25}@media (min-width: 43.75em){blockquote{font-size:1.5em;line-height:1.45833333}}strong{font-weight:900}em{font-style:italic}a{text-decoration:none;font-weight:800}a:hover{text-decoration:underline}.margins h1,.margins h2,.margins h3,.margins h4,.margins h5,.margins h6,.margins p{margin-bottom:20px;max-width:100%}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}body{background-color:#0f0f0f}.wrapper{max-width:1200px;height:100vh;margin:auto;padding:20px}main{width:100%;height:100%;display:grid;grid-template-columns:2fr 1fr;grid-gap:20px}@media screen and (max-width: 860px){main{grid-template-columns:1fr;grid-template-rows:2fr 1fr}}div.gradient-area{border-radius:10px;background-color:blue}div.gradient-control{background-color:#fff;border-radius:10px;padding:20px}form.gradient-form{display:flex;flex-direction:column}form.gradient-form fieldset *{display:block}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font-size: 100%;
+  color: white; }
+
+body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6, button {
+  font-size-adjust: 0.5;
+  font-family: "Courier New", Courier, monospace; }
+
+body {
+  font-size: 1em;
+  /* equivalent to 16px */
+  line-height: 1.25;
+  /* equivalent to 20px */ }
+  @media (min-width: 43.75em) {
+    body {
+      font-size: 1em;
+      /* equivalent to 16px */
+      line-height: 1.375;
+      /* equivalent to 22px */ } }
+
+h1 {
+  font-size: 2em;
+  /* 2x body copy size = 32px */
+  line-height: 1.25;
+  /* 45px / 36px */ }
+
+@media (min-width: 43.75em) {
+  h1 {
+    font-size: 2.5em;
+    /* 2.5x body copy size = 40px */
+    line-height: 1.125; } }
+
+@media (min-width: 56.25em) {
+  h1 {
+    font-size: 3em;
+    /* 3x body copy size = 48px */
+    line-height: 1.05;
+    /* keep to a multiple of the 20px line height and something more appropriate for display headings */ } }
+
+h2 {
+  font-size: 1.625em;
+  /* 1.625x body copy size = 26px */
+  line-height: 1.15384615;
+  /* 30px / 26px */ }
+
+@media (min-width: 43.75em) {
+  h2 {
+    font-size: 2em;
+    /* 2x body copy size = 32px */
+    line-height: 1.25; } }
+
+@media (min-width: 56.25em) {
+  h2 {
+    font-size: 2.25em;
+    /* 2.25x body copy size = 36px */
+    line-height: 1.25; } }
+
+h3 {
+  font-size: 1.375em;
+  /* 1.375x body copy size = 22px */
+  line-height: 1.13636364;
+  /* 25px / 22px */ }
+
+@media (min-width: 43.75em) {
+  h3 {
+    font-size: 1.5em;
+    /* 1.5x body copy size = 24px */
+    line-height: 1.25; } }
+
+@media (min-width: 56.25em) {
+  h3 {
+    font-size: 1.75em;
+    /* 1.75x body copy size = 28px */
+    line-height: 1.25; } }
+
+h4 {
+  font-size: 1.125em;
+  /* 1.125x body copy size = 18px */
+  line-height: 1.11111111; }
+
+@media (min-width: 43.75em) {
+  h4 {
+    line-height: 1.22222222;
+    /* (22px / 18px */ } }
+
+blockquote {
+  font-size: 1.25em;
+  /* 20px / 16px */
+  line-height: 1.25;
+  /* 25px / 20px */ }
+
+@media (min-width: 43.75em) {
+  blockquote {
+    font-size: 1.5em;
+    /* 24px / 16px = */
+    line-height: 1.45833333;
+    /* 35px / 24px */ } }
+
+strong {
+  font-weight: 900; }
+
+em {
+  font-style: italic; }
+
+a {
+  text-decoration: none;
+  font-weight: 800; }
+
+a:hover {
+  text-decoration: underline; }
+
+.margins h1, .margins h2, .margins h3, .margins h4, .margins h5, .margins h6, .margins p {
+  margin-bottom: 20px;
+  max-width: 100%; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  background-color: #0f0f0f; }
+
+.wrapper {
+  max-width: 1200px;
+  height: 100vh;
+  margin: auto;
+  padding: 20px; }
+
+main {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px; }
+  @media screen and (max-width: 860px) {
+    main {
+      grid-template-columns: 1fr;
+      grid-template-rows: 2fr 1fr; } }
+
+div.bottom {
+  height: 10px;
+  width: 100vw; }
+
+div.gradient-area {
+  background-color: PapayaWhip; }
+
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%; }
+  input[type=range]:focus {
+    outline: none; }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #222, 0px 0px 2px #2f2f2f;
+    background: white;
+    border-radius: 0px;
+    border: 0px solid #0f0f0f; }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px #111, 0px 0px 0px #1e1e1e;
+    border: 1px solid #0f0f0f;
+    height: 20px;
+    width: 10px;
+    border-radius: 0px;
+    background: white;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -7px; }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: white; }
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #222, 0px 0px 2px #2f2f2f;
+    background: white;
+    border-radius: 0px;
+    border: 0px solid #0f0f0f; }
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #111, 0px 0px 0px #1e1e1e;
+    border: 1px solid #0f0f0f;
+    height: 20px;
+    width: 10px;
+    border-radius: 0px;
+    background: white;
+    cursor: pointer; }
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 10px 0;
+    color: transparent; }
+  input[type=range]::-ms-fill-lower {
+    background: #f2f2f2;
+    border: 0px solid #0f0f0f;
+    border-radius: 0px;
+    box-shadow: 2px 2px 2px #222, 0px 0px 2px #2f2f2f; }
+  input[type=range]::-ms-fill-upper {
+    background: white;
+    border: 0px solid #0f0f0f;
+    border-radius: 0px;
+    box-shadow: 2px 2px 2px #222, 0px 0px 2px #2f2f2f; }
+  input[type=range]::-ms-thumb {
+    box-shadow: 0px 0px 0px #111, 0px 0px 0px #1e1e1e;
+    border: 1px solid #0f0f0f;
+    height: 20px;
+    width: 10px;
+    border-radius: 0px;
+    background: white;
+    cursor: pointer; }
+  input[type=range]:focus::-ms-fill-lower {
+    background: white; }
+  input[type=range]:focus::-ms-fill-upper {
+    background: white; }
+
+div.gradient-control-wrapper {
+  padding: 2px; }
+
+div.gradient-control {
+  background-color: #0f0f0f;
+  height: 100%;
+  padding: 10px; }
+  div.gradient-control form.gradient-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; }
+    div.gradient-control form.gradient-form input {
+      width: 100%; }
+    div.gradient-control form.gradient-form fieldset * {
+      display: block; }
+    div.gradient-control form.gradient-form input:focus,
+    div.gradient-control form.gradient-form select:focus,
+    div.gradient-control form.gradient-form textarea:focus,
+    div.gradient-control form.gradient-form button:focus {
+      border: 1px solid #fa26e7; }
+  div.gradient-control input[type="color"] {
+    -webkit-appearance: none;
+    border: none;
+    width: 32px;
+    height: 32px; }
+  div.gradient-control input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0; }
+  div.gradient-control input[type="color"]::-webkit-color-swatch {
+    border: none; }
+  div.gradient-control input[type="button"], div.gradient-control button {
+    background-color: #0f0f0f;
+    border: 1px solid white;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; }
+  div.gradient-control input[type="button"]:hover, div.gradient-control button:hover {
+    background-color: white;
+    border: 1px solid #0f0f0f;
+    color: #0f0f0f; }
+  div.gradient-control div.output {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    div.gradient-control div.output button.copybtn {
+      display: block; }

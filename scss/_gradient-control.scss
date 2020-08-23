@@ -1,18 +1,70 @@
+@import 'slider';
+
+div.gradient-control-wrapper {
+  padding: 2px;
+}
+
 div.gradient-control {
-  background-color: $white;
-  border-radius: 10px;
-  padding: 20px;
-}
-
-form.gradient-form {
-  display: flex;
-  flex-direction: column;
-
-  fieldset * {
-    display: block;
+  background-color: $black;
+  height: 100%;
+  padding: 10px;
+  form.gradient-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    input {
+      width: 100%;
+    }
+    fieldset * {
+      display: block;
+    }
+    input:focus,
+    select:focus,
+    textarea:focus,
+    button:focus {
+        border: 1px solid #fa26e7;
+    }
   }
-}
+  // Style Color Selectors:
+  input[type="color"] {
+    -webkit-appearance: none;
+    border: none;
+    width: 32px;
+    height: 32px;
+  }
+  input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+  input[type="color"]::-webkit-color-swatch {
+    border: none;
+  }
 
-.copyright {
-  
+  // Style Buttons:
+  input[type="button"], button {
+    background-color: $black;
+    border: 1px solid $white;
+    color: $white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  input[type="button"]:hover, button:hover {
+    background-color: $white;
+    border: 1px solid $black;
+    color: $black;
+  }
+  div.output {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    button.copybtn {
+      display: block;
+    }
+  }
 }
